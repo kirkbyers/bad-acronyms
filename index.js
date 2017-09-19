@@ -1,14 +1,14 @@
 const { random } = require('faker');
 
-function createBadAcronym(seedWord) {
+function createBadAcronym(seedWord = 'loser') {
     return seedWord.split('').map(letter => {
-        const newWord = random.word();
-        wordArray = newWord.split('');
-        wordArray[0] = letter;
-        return wordArray.join('');
+        let word = ' ';
+        while (word[0] != letter) {
+            word = random.word();
+            word = word.split(' ')[0];  // make sure its only one word
+        }
+        return word;
     });
 }
 
-module.exports = {
-    createBadAcronym
-}
+module.exports = createBadAcronym;
