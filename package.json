@@ -1,5 +1,5 @@
 {
-  "name": "bad-acronym",
+  "name": "@kbye/bad-acronym",
   "version": "1.0.0",
   "description": "A Bad Acronym Generator. You probably shouldn't use this.",
   "main": "index.js",
